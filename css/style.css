@@ -9,9 +9,7 @@
 
 html {
   line-height: 1.15;
-  /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
   font-size: 12px;
   box-sizing: border-box;
 }
@@ -27,18 +25,13 @@ h1 {
 
 hr {
   box-sizing: content-box;
-  /* 1 */
   height: 0;
-  /* 1 */
   overflow: visible;
-  /* 2 */
 }
 
 pre {
   font-family: monospace, monospace;
-  /* 1 */
   font-size: 1em;
-  /* 2 */
 }
 
 a {
@@ -47,11 +40,8 @@ a {
 
 abbr[title] {
   border-bottom: none;
-  /* 1 */
   text-decoration: underline;
-  /* 2 */
   text-decoration: underline dotted;
-  /* 2 */
 }
 
 b,
@@ -63,9 +53,7 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace;
-  /* 1 */
   font-size: 1em;
-  /* 2 */
 }
 
 small {
@@ -98,13 +86,9 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
-  /* 1 */
   font-size: 100%;
-  /* 1 */
   line-height: 1.15;
-  /* 1 */
   margin: 0;
-  /* 2 */
 }
 
 button,
@@ -145,17 +129,11 @@ fieldset {
 
 legend {
   box-sizing: border-box;
-  /* 1 */
   color: inherit;
-  /* 2 */
   display: table;
-  /* 1 */
   max-width: 100%;
-  /* 1 */
   padding: 0;
-  /* 3 */
   white-space: normal;
-  /* 1 */
 }
 
 progress {
@@ -169,28 +147,17 @@ textarea {
 [type=checkbox],
 [type=radio] {
   box-sizing: border-box;
-  /* 1 */
   padding: 0;
-  /* 2 */
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
 [type=number]::-webkit-inner-spin-button,
 [type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
 [type=search] {
   -webkit-appearance: textfield;
-  /* 1 */
   outline-offset: -2px;
-  /* 2 */
 }
 
 [type=search]::-webkit-search-decoration {
@@ -199,9 +166,7 @@ textarea {
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  /* 1 */
   font: inherit;
-  /* 2 */
 }
 
 details {
@@ -261,7 +226,9 @@ header {
   text-transform: uppercase;
   display: flex;
   line-height: 1;
-  margin-bottom: 1rem;
+}
+.text .text-body {
+  margin: 1.5rem 0 3rem 0;
 }
 .text span {
   color: #ce9797;
@@ -273,10 +240,49 @@ header {
   line-height: 1.5;
   width: 36ch;
   color: #ce9797;
+  font-size: 1.2rem;
 }
 
-form {
-  padding: 2rem;
+.email {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  margin-bottom: 10vh;
+}
+.email button {
+  border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
+  width: 6rem;
+  position: relative;
+  border: none;
+  box-shadow: 0.2rem 1rem 5rem 0rem #ce9797;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  background-repeat: no-repeat;
+  margin-left: -5rem;
+}
+.email button::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(../images/icon-arrow.svg) no-repeat;
+  background-position: center;
+  left: 0;
+  top: 0;
+  transform: scale(1.5);
+}
+.email input {
+  width: 85%;
+  border-radius: 4rem;
+  background: transparent;
+  font-size: 1.2rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid #ce9797;
+}
+.email input::placeholder {
+  color: #ce9797;
+  opacity: 50%;
+  font-weight: 350;
 }
 
 .page {
@@ -284,8 +290,43 @@ form {
   flex-direction: column;
   align-items: center;
   min-width: 100vw;
+  background: linear-gradient(135deg, white, #fff5f5);
+  background-repeat: no-repeat;
   min-height: 100vh;
-  background-color: seashell;
+}
+
+@media (min-width: 50rem) {
+  .page {
+    flex-direction: row;
+  }
+
+  .leftside {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 2;
+  }
+  .hero img {
+    height: 100vh;
+    width: auto;
+    content: url(../images/hero-desktop.jpg);
+    flex-shrink: 2;
+  }
+
+  .main-title {
+    margin-left: 5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
